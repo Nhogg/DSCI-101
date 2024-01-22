@@ -179,71 +179,95 @@ table(df$V3)
 
 # 1. Assign an a value of 30 to an object named age. Check it's class. 
 
-
+age <- 30
+class(age)
 
 # 2. Force the object created in part 1 to be an integer. Check it's class
 
 age<-as.integer(30)
-
+class(age)
 
 
 # 3. Convert the following object from character to numeric
 w <- "55"
-
+w <- as.numeric(w)
+w
 
 # 4. Convert the following object from numeric to character
 
 m <- 55.5
+m <- as.character(m)
+m
 
 
 # 5. Create a vectors named s with the following numbers (in that order): 11, 2, 9, 8, 10, 9, 0
 
-
+s <- c(11, 2, 9, 8, 10, 9, 0)
+s
 
 # 6. Extract the third element from vector s (in part 5) by subsetting the vector.
 
+s[3]
 
 
 # 7. Extract the second to the fifth element from vector s (in part 5) by subsetting the vector.
 
-
+s[2:5]
 
 
 # 8. Create a vector named b of 7 elements that go from 1 to 7. 
 
+b <- c(1:7)
+b
 
 # 9. Multiply vectors s and b and save it as an object named q. Notice how the multiplication is performed?
 
+q = s * b
+
+q
 # 10. Create a vector named h with the "Paste" function such that the elements names are 3w, 4w, 5w, ..., 10w
 
 
-
+h <- paste("w", 3:10, sep="")
+h
 
 
 # 11. Create a matrix named matx that has 4 columns with the strings of values from 1 to 12 by column
 
-
+matx <- matrix(c(1:12), ncol=4, byrow="false")
+matx
 
 # 12. Extract the element in column 3 and row 2 from matrix matx  (in part 11) by subsetting the matrix.
 
+matx[3, 2]
 
 # 13. Extract column 4 from matrix matx  (in part 11) by subsetting the matrix.
 
-
+matx[ ,4]
 
 # 14. Extract row 3 from matrix matx  (in part 11) by subsetting the matrix.
 
-
+matx[3, ]
 
 # 15. Extract row 4 from matrix matx  (in part 11) by subsetting the matrix.
 
+matx[4, ]
+# There isn't a fourth row...
 
 # 16. Create a list named g such that the first element is a vector (named v) of three 4's, the second element 
 #     (named j) is a vector with the number 8, and the third element is a matrix (named n) that has elements of
 #      2 to 7 with 3 columns. 
 
-
+g <- list(
+ v <- rep(4, 3),
+ j <- c(8),
+ n <- matrix(c(2:7), ncol=3, byrow="true")
+)
+g
 
 # 16. Create a dataframe of your choice with 3 variables.
+df <- data.frame(var1 <- c(1:32), var2 <- matrix(c("a", "b", "c", "d"), ncol=2, byrow="true"), var3 <- "Nathan")
+df
 
 # 17. Summarize and create a frequency table for your second column in your data frame. 
+summary(df[ ,2])
